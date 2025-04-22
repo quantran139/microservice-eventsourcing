@@ -19,6 +19,6 @@ RUN mvn clean package -DskipTests
 # Use OpenJDK for running
 FROM openjdk:21-jdk-slim
 WORKDIR /app
-COPY --from=build /app/bookservice/target/*.jar bookservice.jar
+COPY --from=build /app/bookservice/target/bookservice-0.0.1-SNAPSHOT.jar bookservice.jar
 EXPOSE 9001
 ENTRYPOINT ["java", "-jar", "bookservice.jar"]
