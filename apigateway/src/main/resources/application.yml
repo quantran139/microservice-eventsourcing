@@ -45,9 +45,11 @@ spring:
 
 eureka:
   instance:
-    hostname: localhost
+    #hostname: localhost
+    hostname: discoveryserver
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      #defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://discoveryserver:8761/eureka/
