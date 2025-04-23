@@ -51,16 +51,16 @@ services:
 #            - axonserver
 #        environment:
 #            - "AXONIQ_AXONSERVER_SERVERS=axonserver:8024"
-    apigateway:
-        build:
-            context: .
-            dockerfile: apigateway/Dockerfile
-        ports:
-            - "8080:8080"
-        networks:
-            - microservice-networks
-        depends_on:
-            - discoveryserver
+#    apigateway:
+#        build:
+#            context: .
+#            dockerfile: apigateway/Dockerfile
+#        ports:
+#            - "8080:8080"
+#        networks:
+#            - microservice-networks
+#        depends_on:
+#            - discoveryserver
 #            - redis
 #    notificationservice:
 #        build:
