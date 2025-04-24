@@ -21,7 +21,7 @@ jobs:
             password: ${{ secrets.DOCKER_PASSWORD }}
         - name: Build and push images
           env:
-            DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+            DOCKER_USERNAME: hongquan139
           run: |
             docker compose -f docker-compose.yml build discoveryserver
             docker compose -f docker-compose.yml push discoveryserver
