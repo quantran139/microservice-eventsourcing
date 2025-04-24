@@ -23,5 +23,5 @@ jobs:
           env:
             DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           run: |
-            docker compose -f docker-compose.yml build discovevyserver
-            docker compose -f docker-compose.yml push discovevyserver
+            docker compose -f docker-compose.yml build discoveryserver
+            docker compose -f docker-compose.yml push discoveryserver
