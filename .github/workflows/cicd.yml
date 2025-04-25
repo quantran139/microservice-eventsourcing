@@ -23,8 +23,9 @@ jobs:
           env:
             DOCKER_USERNAME: hongquan139
           run: |
-            docker compose -f docker-compose.yml build discoveryserver
+            docker compose -f docker-compose.yml build axonserver discoveryserver bookservice
             docker compose -f docker-compose.yml push discoveryserver
+            docker compose -f docker-compose.yml push bookservice
 
   deploy:
     needs: build-and-push
